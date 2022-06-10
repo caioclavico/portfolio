@@ -3,8 +3,11 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
-import { Header } from "./components/Header";
 import { AppProvider } from "./contexts";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const container = document.getElementById("root");
 if (!container) throw new Error("Failed to find the root element");
@@ -15,7 +18,6 @@ root.render(
         <BrowserRouter>
             <AppProvider>
                 <ColorModeScript />
-                <Header />
                 <App />
             </AppProvider>
         </BrowserRouter>

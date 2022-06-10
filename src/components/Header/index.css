@@ -1,0 +1,13 @@
+.nav-item {
+    display: inline;
+    color: #fff;
+}
+
+.nav-item:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.nav-item > .active {
+    border-bottom: 1px solid teal;
+}
