@@ -12,6 +12,8 @@ import EuPerfil from "../../../assets/eu.jpeg";
 
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
+import Tilt from "react-parallax-tilt";
+
 export const About = () => {
     const animatedborder = keyframes`
     0% {
@@ -25,7 +27,7 @@ export const About = () => {
 	}
             `;
     return (
-        <Flex id="about" alignItems="center" h="500px">
+        <Flex id="about" alignItems="center" h="100vh">
             <Grid
                 w={"35%"}
                 h="100%"
@@ -33,16 +35,22 @@ export const About = () => {
                 data-aos="fade-right"
                 data-aos-anchor-placement="top-center"
             >
-                <Image
-                    src={EuPerfil}
-                    alt="illustration man working"
-                    boxSize="250px"
-                    objectFit="cover"
-                    position={"relative"}
-                    borderRadius="50%"
-                    border="solid 3px white"
-                    left="50%"
-                />
+                <Tilt
+                    style={{
+                        position: "relative",
+                        left: "50%",
+                        width: "250px",
+                    }}
+                >
+                    <Image
+                        src={EuPerfil}
+                        alt="illustration man working"
+                        objectFit="cover"
+                        borderRadius="50%"
+                        border="solid 3px white"
+                        m={0}
+                    />
+                </Tilt>
             </Grid>
             <Grid
                 w={"65%"}
@@ -69,7 +77,7 @@ export const About = () => {
                     <Link
                         href="https://github.com/caioclavico"
                         isExternal
-                        animation={`${animatedborder} 2s ease alternate infinite`}
+                        animation={`${animatedborder} 5s ease alternate infinite`}
                         borderRadius="10px"
                         p="3px"
                         _hover={{ textDecoration: "none" }}
@@ -101,7 +109,7 @@ export const About = () => {
                     <Link
                         href="https://linkedin.com/in/caioclavico"
                         isExternal
-                        animation={`${animatedborder} 2s ease alternate infinite`}
+                        animation={`${animatedborder} 5s ease alternate infinite`}
                         borderRadius="10px"
                         p="3px"
                         _hover={{ textDecoration: "none" }}
@@ -110,7 +118,7 @@ export const About = () => {
                             backgroundSize: "400% 400%",
                             backgroundOrigin: "content-box",
                             backgroundImage:
-                                "linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",
+                                "linear-gradient(-60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",
                         }}
                     >
                         <Text

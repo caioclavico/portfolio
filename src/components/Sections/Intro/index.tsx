@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import Illustration from "../../../assets/illustration.svg";
 
+import Tilt from "react-parallax-tilt";
+
 export const Intro = () => {
     const bg = useColorModeValue(
         "Linear(to-r, teal.100 65%, white 35%)",
@@ -27,7 +29,7 @@ export const Intro = () => {
     };
 
     return (
-        <Flex id="intro" alignItems="center" bgGradient={bg}>
+        <Flex id="intro" alignItems="center" bgGradient={bg} h="100vh">
             <Grid
                 w={"65%"}
                 animation={animationSlide("left")}
@@ -48,13 +50,13 @@ export const Intro = () => {
                 animation={animationSlide("right")}
                 position="relative"
             >
-                <Image
-                    src={Illustration}
-                    alt="illustration man working"
-                    boxSize="700px"
-                    position={"relative"}
-                    right="50%"
-                />
+                <Tilt style={{ position: "relative", right: "50%" }}>
+                    <Image
+                        src={Illustration}
+                        alt="illustration man working"
+                        width="700px"
+                    />
+                </Tilt>
             </Grid>
         </Flex>
     );

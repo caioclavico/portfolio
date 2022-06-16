@@ -49,7 +49,7 @@ export const Header = () => {
                             to="intro"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             Home
@@ -61,7 +61,7 @@ export const Header = () => {
                             to="about"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             Sobre
@@ -73,7 +73,7 @@ export const Header = () => {
                             to="skills"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             Habilidades
@@ -85,7 +85,7 @@ export const Header = () => {
                             to="projects"
                             spy={true}
                             smooth={true}
-                            offset={-70}
+                            offset={0}
                             duration={500}
                         >
                             Projetos

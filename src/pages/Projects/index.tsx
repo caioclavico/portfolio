@@ -1,3 +1,5 @@
 import { Heading } from "@chakra-ui/react";
 
-export const Projects = () => <Heading>Projects Page</Heading>;
+export const Projects = () => {
+    return <Heading>Projects Page</Heading>;
+};
