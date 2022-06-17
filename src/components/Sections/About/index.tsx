@@ -1,5 +1,6 @@
 import {
     Flex,
+    FlexProps,
     Grid,
     Heading,
     Image,
@@ -14,7 +15,9 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 import Tilt from "react-parallax-tilt";
 
-export const About = () => {
+type AboutProps = Omit<FlexProps, "aria-label">;
+
+export const About: React.FC<AboutProps> = (props) => {
     const animatedborder = keyframes`
     0% {
 		background-position: 5% 50%;
@@ -27,7 +30,7 @@ export const About = () => {
 	}
             `;
     return (
-        <Flex id="about" alignItems="center" h="100vh">
+        <Flex id="about" alignItems="center" h="100vh" {...props}>
             <Grid
                 w={"35%"}
                 h="100%"

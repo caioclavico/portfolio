@@ -28,7 +28,7 @@ export const Header = () => {
             bgColor={bg}
             position="fixed"
             top="0px"
-            zIndex="1000"
+            zIndex={2}
             boxShadow="0 4px 14px 0 rgba(0, 0, 0, 0.15)"
         >
             <Flex w="100%" justify="space-between">

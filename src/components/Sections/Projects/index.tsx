@@ -168,8 +168,13 @@ export const Projects = () => {
                 PROJETOS
             </Heading>
             <div id="coverflow">
-                {slides.map((slide) => (
-                    <Box as="section" data-cover={slide.image} color="white">
+                {slides.map((slide, i) => (
+                    <Box
+                        key={i}
+                        as="section"
+                        data-cover={slide.image}
+                        color="white"
+                    >
                         <Box className="slideContentInner" display="none">
                             <h2 className="slideTitle">{slide.title}</h2>
                             <h3 className="slideSubtitle">{slide.subtitle}</h3>
