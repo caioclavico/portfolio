@@ -12,34 +12,34 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 export const Projects = () => {
     const slides = [
         {
-            title: "Machu Picchu",
-            subtitle: "Peru",
-            description: "Adventure is never far away",
-            image: "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+            title: "Torneio tribruxo",
+            subtitle: "JavaScript",
+            description: "Utilizanto a API do Harry Potter",
+            image: "https://i.ibb.co/54GLTy4/harry-poter-icon-transparent.png",
         },
         {
-            title: "Chamonix",
-            subtitle: "France",
-            description: "Let your dreams come true",
-            image: "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+            title: "Hamburgueria 2.0",
+            subtitle: "React/TypeScript",
+            description: "Marketplace de uma hamburgueria",
+            image: "https://i.ibb.co/w7Hm2XP/hamburguer.webp",
         },
         {
-            title: "Mimisa Rocks",
-            subtitle: "Australia",
-            description: "A piece of heaven",
-            image: "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+            title: "Kenzie Hub",
+            subtitle: "React",
+            description: "Utilizando Material UI",
+            image: "https://i.ibb.co/CKGPXQ0/kenzie-Hub2.png",
         },
         {
-            title: "Four",
-            subtitle: "Australia",
-            description: "A piece of heaven",
-            image: "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+            title: "Kenzie Shop",
+            subtitle: "React",
+            description: "Marketplace",
+            image: "https://i.ibb.co/74vwwH7/marketplace.png",
         },
         {
-            title: "Five",
-            subtitle: "Australia",
-            description: "A piece of heaven",
-            image: "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+            title: "Oil Cycle",
+            subtitle: "React/TypeScript",
+            description: "Projeto realizado em grupo",
+            image: "https://i.ibb.co/s9rpvRK/Oil-Cycle-logo.png",
         },
     ];
 
@@ -178,9 +178,9 @@ export const Projects = () => {
                         <Box className="slideContentInner" display="none">
                             <h2 className="slideTitle">{slide.title}</h2>
                             <h3 className="slideSubtitle">{slide.subtitle}</h3>
-                            <p className="slideDescription">
+                            {/* <p className="slideDescription">
                                 {slide.description}
-                            </p>
+                            </p> */}
                         </Box>
                     </Box>
                 ))}

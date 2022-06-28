@@ -5,8 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
 import { AppProvider } from "./contexts";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
+
 AOS.init();
 
 const container = document.getElementById("root");
@@ -17,7 +17,7 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <AppProvider>
-                <ColorModeScript />
+                <ColorModeScript initialColorMode="dark" />
                 <App />
             </AppProvider>
         </BrowserRouter>
