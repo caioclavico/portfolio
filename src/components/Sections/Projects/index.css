@@ -1,7 +1,7 @@
 #coverflow {
     width: 100%;
     position: relative;
-    top: 50%;
+    top: 30%;
 
     perspective: 600px;
 }
@@ -11,7 +11,7 @@
     transform-style: preserve-3d;
     transform: translateZ(2rem);
     transition: opacity 0.3s linear;
-    text-shadow: 0 0.1rem 1rem #000;
+    text-shadow: 0 0.3rem 1rem #000;
     opacity: 1;
 }
 
@@ -43,6 +43,12 @@
 
 .slide_active:hover {
     box-shadow: 0 0 1em silver;
+}
+
+.slide_active .slideDetails {
+    display: block;
+    position: relative;
+    top: 70%;
 }
 
 #coverflow section {
