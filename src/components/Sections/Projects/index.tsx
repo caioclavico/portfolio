@@ -3,46 +3,15 @@ import {
     Heading,
     Icon,
     IconButton,
+    Text,
     useColorModeValue,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./index.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { projects } from "../../../utils/projects";
 
 export const Projects = () => {
-    const slides = [
-        {
-            title: "Torneio tribruxo",
-            subtitle: "JavaScript",
-            description: "Utilizanto a API do Harry Potter",
-            image: "https://i.ibb.co/54GLTy4/harry-poter-icon-transparent.png",
-        },
-        {
-            title: "Hamburgueria 2.0",
-            subtitle: "React/TypeScript",
-            description: "Marketplace de uma hamburgueria",
-            image: "https://i.ibb.co/w7Hm2XP/hamburguer.webp",
-        },
-        {
-            title: "Kenzie Hub",
-            subtitle: "React",
-            description: "Utilizando Material UI",
-            image: "https://i.ibb.co/CKGPXQ0/kenzie-Hub2.png",
-        },
-        {
-            title: "Kenzie Shop",
-            subtitle: "React",
-            description: "Marketplace",
-            image: "https://i.ibb.co/74vwwH7/marketplace.png",
-        },
-        {
-            title: "Oil Cycle",
-            subtitle: "React/TypeScript",
-            description: "Projeto realizado em grupo",
-            image: "https://i.ibb.co/s9rpvRK/Oil-Cycle-logo.png",
-        },
-    ];
-
     // Local variables
     let _index = 0,
         _prevLink: Element | null = null,
@@ -53,6 +22,8 @@ export const Projects = () => {
     const ROTATION = 45; // degrees
     const BASE_ZINDEX = 10;
     const MAX_ZINDEX = 42;
+
+    const [index, setIndex] = useState(Math.floor(projects.length / 2));
 
     function get(selector: string): Element | null {
         return document.querySelector(selector);
@@ -100,6 +71,7 @@ export const Projects = () => {
     function flowRight() {
         if (_index) {
             _index--;
+            setIndex(_index);
             render();
         }
     }
@@ -107,6 +79,7 @@ export const Projects = () => {
     function flowLeft() {
         if (_albums.length > _index + 1) {
             _index++;
+            setIndex(_index);
             render();
         }
     }
@@ -162,13 +135,11 @@ export const Projects = () => {
             textAlign="center"
             position="relative"
             bgColor={bg}
-            pt="60px"
+            pt={12}
         >
-            <Heading mt={8} color={fontColor}>
-                PROJETOS
-            </Heading>
+            <Heading color={fontColor}>PROJETOS</Heading>
             <div id="coverflow">
-                {slides.map((slide, i) => (
+                {projects.map((slide, i) => (
                     <Box
                         key={i}
                         as="section"
@@ -204,6 +175,10 @@ export const Projects = () => {
                     icon={<Icon as={MdKeyboardArrowRight} w={12} h={12} />}
                 />
             </nav>
+            <Box bottom={10} position="absolute" w="100%">
+                <Heading>{projects[index].title}</Heading>
+                <Text>{projects[index].description}</Text>
+            </Box>
         </Box>
     );
 };
