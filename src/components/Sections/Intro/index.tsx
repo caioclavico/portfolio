@@ -12,9 +12,14 @@ import Illustration from "../../../assets/illustration.svg";
 import Tilt from "react-parallax-tilt";
 
 export const Intro = () => {
-    const bg = useColorModeValue(
+    const bgR = useColorModeValue(
         "Linear(to-r, teal.100 65%, white 35%)",
         "Linear(to-r, gray.700 65%, white 35%)"
+    );
+
+    const bgB = useColorModeValue(
+        "Linear(to-b, teal.100 100%, white 35%)",
+        "Linear(to-b, gray.700 100%, white 35%)"
     );
 
     const fontColor = useColorModeValue("gray.500", "white");
@@ -29,13 +34,25 @@ export const Intro = () => {
     };
 
     return (
-        <Flex id="intro" alignItems="center" bgGradient={bg} h="100vh">
+        <Flex
+            id="intro"
+            alignItems="center"
+            bgGradient={[bgB, bgB, bgR, bgR]}
+            flexDirection={["column", "column", "row", "row"]}
+            h={["auto", "auto", "100vh", "100vh"]}
+            w="100%"
+        >
             <Grid
-                w={"65%"}
+                w={["100%", "100%", "65%", "65%"]}
                 animation={animationSlide("left")}
                 position="relative"
             >
-                <Heading as={"h1"} m={"150px"} color={fontColor}>
+                <Heading
+                    as={"h1"}
+                    mx={["20px", "50px", "100px", "150px"]}
+                    my="150px"
+                    color={fontColor}
+                >
                     Olá, Eu sou
                     <br />{" "}
                     <Text as={"span"} color="teal.400" fontSize={"6xl"}>
@@ -49,6 +66,7 @@ export const Intro = () => {
                 w={"35%"}
                 animation={animationSlide("right")}
                 position="relative"
+                display={["none", "none", "grid", "grid"]}
             >
                 <Tilt style={{ position: "relative", right: "50%" }}>
                     <Image

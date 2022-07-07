@@ -10,9 +10,11 @@ export const Skills = () => {
             gap={12}
             w="100vw"
             borderTop="1px solid"
-            py={12}
+            py={16}
         >
-            <Heading textAlign="center">Minhas Skills</Heading>
+            <Heading mt={4} textAlign="center">
+                Minhas Skills
+            </Heading>
             <HStack justifyContent="center" flexWrap="wrap" shouldWrapChildren>
                 {skills.map((skill, i) => (
                     <SkillCard key={i} img={skill.img} name={skill.name} />

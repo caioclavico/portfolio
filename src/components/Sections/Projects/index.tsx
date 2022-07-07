@@ -1,6 +1,8 @@
 import {
     Box,
+    Button,
     Heading,
+    HStack,
     Icon,
     IconButton,
     Text,
@@ -9,6 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import "./index.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { AiFillGithub, AiFillEye } from "react-icons/ai";
 import { projects } from "../../../utils/projects";
 
 export const Projects = () => {
@@ -131,13 +134,15 @@ export const Projects = () => {
         <Box
             id="projects"
             width="100%"
-            height="100vh"
+            minHeight="500px"
             textAlign="center"
             position="relative"
             bgColor={bg}
-            pt={12}
+            pt={16}
         >
-            <Heading color={fontColor}>PROJETOS</Heading>
+            <Heading mt={4} color={fontColor}>
+                Meus Projetos
+            </Heading>
             <div id="coverflow">
                 {projects.map((slide, i) => (
                     <Box
@@ -145,6 +150,7 @@ export const Projects = () => {
                         as="section"
                         data-cover={slide.image}
                         color="white"
+                        onClick={() => window.open(slide.git, "_blank")}
                     >
                         <Box className="slideContentInner" display="none">
                             <h2 className="slideTitle">{slide.title}</h2>
@@ -175,9 +181,31 @@ export const Projects = () => {
                     icon={<Icon as={MdKeyboardArrowRight} w={12} h={12} />}
                 />
             </nav>
-            <Box bottom={10} position="absolute" w="100%">
+            <Box bottom={4} mt={6} position="relative" w="100%" px={12}>
                 <Heading>{projects[index].title}</Heading>
-                <Text>{projects[index].description}</Text>
+                <Text p={4}>{projects[index].description}</Text>
+                <HStack w="100%" justifyContent="center">
+                    <Button
+                        leftIcon={<AiFillGithub />}
+                        w="100px"
+                        onClick={() =>
+                            window.open(projects[index].git, "_blank")
+                        }
+                    >
+                        Git
+                    </Button>
+                    {projects[index].view && (
+                        <Button
+                            leftIcon={<AiFillEye />}
+                            w="100px"
+                            onClick={() =>
+                                window.open(projects[index].view, "_blank")
+                            }
+                        >
+                            View
+                        </Button>
+                    )}
+                </HStack>
             </Box>
         </Box>
     );
