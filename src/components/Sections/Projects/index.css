@@ -1,7 +1,7 @@
 #coverflow {
     width: 100%;
     position: relative;
-    top: 30%;
+    height: 300px;
 
     perspective: 600px;
 }
@@ -81,15 +81,14 @@
 }
 
 #controls {
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 30%;
-    transform: translateY(50%);
+    transform: translateY(10%);
     z-index: 1;
 
     display: flex;
     justify-content: center;
-    gap: 25rem;
+    gap: 15rem;
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;

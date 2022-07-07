@@ -1,32 +1,44 @@
 export const projects = [
     {
-        title: "Torneio tribruxo",
-        subtitle: "JavaScript",
-        description: "Utilizanto a API do Harry Potter",
-        image: "https://i.ibb.co/54GLTy4/harry-poter-icon-transparent.png",
+        title: "Kenzie Shop",
+        subtitle: "React",
+        description:
+            "Marketplace utilizando react com Material UI e context API",
+        image: "https://i.ibb.co/74vwwH7/marketplace.png",
+        git: "https://github.com/caioclavico/react-entrega-s3-kenzishop-com-context-api-caioclavico",
+        view: "https://react-entrega-s3-kenzishop-com-context-api-caioclavico.vercel.app/",
     },
     {
         title: "Hamburgueria 2.0",
-        subtitle: "React/TypeScript",
-        description: "Marketplace de uma hamburgueria",
+        subtitle: "React",
+        description:
+            "Criação de um site de hamburgueria utilizando react e json server",
         image: "https://i.ibb.co/w7Hm2XP/hamburguer.webp",
-    },
-    {
-        title: "Kenzie Hub",
-        subtitle: "React",
-        description: "Utilizando Material UI",
-        image: "https://i.ibb.co/CKGPXQ0/kenzie-Hub2.png",
-    },
-    {
-        title: "Kenzie Shop",
-        subtitle: "React",
-        description: "Marketplace",
-        image: "https://i.ibb.co/74vwwH7/marketplace.png",
+        git: "https://github.com/caioclavico/react-hamburgueria-2-0-com-typescript-json-server",
+        view: "https://react-entrega-s5-hamburgueria-2-0-com-typescript-js-caioclavico.vercel.app",
     },
     {
         title: "Oil Cycle",
-        subtitle: "React/TypeScript",
-        description: "Projeto realizado em grupo",
+        subtitle: "React",
+        description:
+            "Projeto realizado em grupo de um site com o objetivo de ajudar as pessoas na reciclagem do óleo de cozinha",
         image: "https://i.ibb.co/s9rpvRK/Oil-Cycle-logo.png",
+        git: "https://github.com/caioclavico/Oil-Cycle",
+    },
+    {
+        title: "API Flask",
+        subtitle: "Flask",
+        description:
+            "API utilizando a framework Flask de um marketplace de NFT's onde os usuários podem vender, comprar e registrar suas criações e coleções",
+        image: "https://i.ibb.co/G0DBBbR/flask.png",
+        git: "https://github.com/caioclavico/capstone-flask-q3",
+    },
+    {
+        title: "API Node",
+        subtitle: "Node JS",
+        description:
+            "API utilizando Node JS que consiste em um market de alugueis de carro, onde o usuario pode cadastrar seu veículo e alugar veículos de terceiros",
+        image: "https://i.ibb.co/b3jqjtD/nodejs-logo.png",
+        git: "https://github.com/caioclavico/capstone-node-q4",
     },
 ];

@@ -30,19 +30,25 @@ export const About: React.FC<AboutProps> = (props) => {
 	}
             `;
     return (
-        <Flex id="about" alignItems="center" h="100vh" {...props}>
+        <Flex
+            id="about"
+            alignItems="center"
+            h={["auto", "auto", "100vh", "100vh"]}
+            p={"50px 0px"}
+            flexDirection={["column", "column", "row", "row"]}
+            {...props}
+        >
             <Grid
-                w={"35%"}
+                w={["50%", "50%", "35%", "35%"]}
                 h="100%"
                 alignItems="center"
                 data-aos="fade-right"
                 data-aos-anchor-placement="top-center"
+                justifyContent={["center", "center", "flex-end", "flex-end"]}
             >
                 <Tilt
                     style={{
-                        position: "relative",
-                        left: "50%",
-                        width: "250px",
+                        maxWidth: "250px",
                     }}
                 >
                     <Image
@@ -56,9 +62,11 @@ export const About: React.FC<AboutProps> = (props) => {
                 </Tilt>
             </Grid>
             <Grid
-                w={"65%"}
+                w={["100%", "100%", "65%", "65%"]}
                 h="100%"
-                p={"0px 150px"}
+                px={["50px", "50px", "100px", "150px"]}
+                py={["50px", "50px"]}
+                textAlign={["center", "center", "justify", "justify"]}
                 alignContent="center"
                 data-aos="fade-left"
                 data-aos-anchor-placement="top-center"
@@ -67,16 +75,21 @@ export const About: React.FC<AboutProps> = (props) => {
                     Sobre Mim
                 </Heading>
                 <Text>
-                    Meu nome é Caio Henrique Clavico Crizanto e sou apaixonado
-                    por tecnologia. Meu primeiro contato com a programação
-                    iniciou na faculdade de engenharia em 2012. Apesar de ter
-                    gostado da área, só comecei a dar o devido foco em 2021,
-                    quando conheci a Kenzie Academy e iniciei meus estudos com
+                    Sou apaixonado por tecnologia e engenharia, amante em
+                    resolver problemas e desafios, meu primeiro contato com a
+                    programação iniciou na faculdade de engenharia em 2012.
+                    Apesar de ter gostado da área, só comecei a dar o devido
+                    foco em 2021, quando iniciei meus estudos com
                     desemvolvimento web. <br />
                     Hoje trabalho com tecnologias voltadas para back-end e
-                    front-end
+                    front-end.
                 </Text>
-                <Flex justifyContent="center" gap="50px" mt="50px">
+                <Flex
+                    justifyContent="center"
+                    gap="50px"
+                    mt="50px"
+                    wrap={"wrap"}
+                >
                     <Link
                         href="https://github.com/caioclavico"
                         isExternal
