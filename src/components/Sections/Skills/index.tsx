@@ -9,12 +9,12 @@ export const Skills = () => {
             direction="column"
             gap={12}
             w="100vw"
-            h={["auto", "auto", "100vh", "100vh"]}
+            minH={["auto", "auto", "100vh", "100vh"]}
             justifyContent="center"
             borderTop="5px solid"
             py={16}
         >
-            <Heading mt={4} textAlign="center">
+            <Heading mt={8} textAlign="center">
                 Minhas Skills
             </Heading>
             <HStack justifyContent="center" flexWrap="wrap" shouldWrapChildren>
