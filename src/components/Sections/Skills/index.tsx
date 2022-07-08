@@ -9,7 +9,9 @@ export const Skills = () => {
             direction="column"
             gap={12}
             w="100vw"
-            borderTop="1px solid"
+            h={["auto", "auto", "100vh", "100vh"]}
+            justifyContent="center"
+            borderTop="5px solid"
             py={16}
         >
             <Heading mt={4} textAlign="center">
