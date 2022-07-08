@@ -1,6 +1,7 @@
 import {
     Box,
     Button,
+    Flex,
     Heading,
     HStack,
     Icon,
@@ -131,10 +132,12 @@ export const Projects = () => {
     const fontColor = useColorModeValue("gray.500", "white");
 
     return (
-        <Box
+        <Flex
             id="projects"
             width="100%"
-            minHeight="500px"
+            h={["auto", "auto", "100vh", "100vh"]}
+            direction={"column"}
+            justifyContent="center"
             textAlign="center"
             position="relative"
             bgColor={bg}
@@ -207,6 +210,6 @@ export const Projects = () => {
                     )}
                 </HStack>
             </Box>
-        </Box>
+        </Flex>
     );
 };
