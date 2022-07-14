@@ -1,7 +1,7 @@
 export const projects = [
     {
         title: "Kenzie Shop",
-        subtitle: "React",
+        subtitle: "Front-end",
         description:
             "Marketplace utilizando react com Material UI e context API",
         image: "https://i.ibb.co/74vwwH7/marketplace.png",
@@ -10,7 +10,7 @@ export const projects = [
     },
     {
         title: "Hamburgueria 2.0",
-        subtitle: "React",
+        subtitle: "Front-end",
         description:
             "Criação de um site de hamburgueria utilizando react e json server",
         image: "https://i.ibb.co/w7Hm2XP/hamburguer.webp",
@@ -19,15 +19,15 @@ export const projects = [
     },
     {
         title: "Oil Cycle",
-        subtitle: "React",
+        subtitle: "Front-end",
         description:
-            "Projeto realizado em grupo de um site com o objetivo de ajudar as pessoas na reciclagem do óleo de cozinha",
+            "Projeto realizado em grupo de uma aplicação web com o objetivo de ajudar as pessoas na reciclagem do óleo de cozinha",
         image: "https://i.ibb.co/s9rpvRK/Oil-Cycle-logo.png",
         git: "https://github.com/caioclavico/Oil-Cycle",
     },
     {
         title: "API Flask",
-        subtitle: "Flask",
+        subtitle: "Back-end",
         description:
             "API utilizando a framework Flask de um marketplace de NFT's onde os usuários podem vender, comprar e registrar suas criações e coleções",
         image: "https://i.ibb.co/G0DBBbR/flask.png",
@@ -35,7 +35,7 @@ export const projects = [
     },
     {
         title: "API Node",
-        subtitle: "Node JS",
+        subtitle: "Back-end",
         description:
             "API utilizando Node JS que consiste em um market de alugueis de carro, onde o usuario pode cadastrar seu veículo e alugar veículos de terceiros",
         image: "https://i.ibb.co/b3jqjtD/nodejs-logo.png",

@@ -29,6 +29,9 @@ export const About: React.FC<AboutProps> = (props) => {
 		background-position: 5% 50%;
 	}
             `;
+
+    const fontColor = useColorModeValue("gray.500", "white");
+
     return (
         <Flex
             id="about"
@@ -36,6 +39,7 @@ export const About: React.FC<AboutProps> = (props) => {
             h={["auto", "auto", "100vh", "100vh"]}
             p={"50px 0px"}
             flexDirection={["column", "column", "row", "row"]}
+            color={fontColor}
             {...props}
         >
             <Grid
@@ -77,9 +81,9 @@ export const About: React.FC<AboutProps> = (props) => {
                 <Text>
                     Sou apaixonado por tecnologia e engenharia, amante em
                     resolver problemas e desafios, meu primeiro contato com a
-                    programação iniciou na faculdade de engenharia em 2012.
-                    Apesar de ter gostado da área, só comecei a dar o devido
-                    foco em 2021, quando iniciei meus estudos com
+                    programação iniciou no curso técnico em automação industrial
+                    em 2017. Apesar de ter gostado da área, só comecei a dar o
+                    devido foco em 2021, quando iniciei meus estudos com
                     desemvolvimento web. <br />
                     Hoje trabalho com tecnologias voltadas para back-end e
                     front-end.

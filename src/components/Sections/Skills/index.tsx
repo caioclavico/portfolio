@@ -1,8 +1,10 @@
-import { Flex, Heading, HStack } from "@chakra-ui/react";
+import { Flex, Heading, HStack, useColorModeValue } from "@chakra-ui/react";
 import { skills } from "../../../utils/skills";
 import { SkillCard } from "./SkillCard";
 
 export const Skills = () => {
+    const fontColor = useColorModeValue("gray.500", "white");
+
     return (
         <Flex
             id="skills"
@@ -13,6 +15,7 @@ export const Skills = () => {
             justifyContent="center"
             borderTop="5px solid"
             py={16}
+            color={fontColor}
         >
             <Heading mt={8} textAlign="center">
                 Minhas Skills

@@ -142,10 +142,9 @@ export const Projects = () => {
             position="relative"
             bgColor={bg}
             pt={16}
+            color={fontColor}
         >
-            <Heading mt={4} color={fontColor}>
-                Meus Projetos
-            </Heading>
+            <Heading mt={4}>Meus Projetos</Heading>
             <div id="coverflow">
                 {projects.map((slide, i) => (
                     <Box
